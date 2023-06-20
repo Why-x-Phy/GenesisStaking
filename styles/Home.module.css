@@ -32,6 +32,7 @@
   border-radius: 5px;
   padding: 5px;
   box-shadow: 0 0 18px 0 #82919b;
+  margin-bottom: 10px !important;
 }
 
 .main {
@@ -46,8 +47,11 @@
 }
 
 .stakeContainer {
-  display: flex;
   margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .button {
@@ -55,6 +59,7 @@
   color:#ebebee !important;
   padding: 5px;
   margin-left: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 .title a {
