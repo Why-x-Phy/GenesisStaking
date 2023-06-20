@@ -127,8 +127,8 @@
 .card:focus,
 .card:active {
   background-color: #4d5666;
-  color: #0ea5e9;
-  border-color: #0ea5e9;
+  color: #ffdbf5;
+  border-color: #ffdbf5;
 }
 
 .card h2 {
