@@ -1,5 +1,37 @@
 .container {
-  padding: 0 2rem;
+  background-color: transparent !important;
+  background-image: none !important;
+  background: transparent !important;
+}
+
+.wallet {
+  margin-top: 2rem;
+  color:#ebebee !important;
+  background: #3C1B32 !important;
+}
+
+.loading {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  padding: 5px 24px;
+  background: 
+        url("https://ipfs.thirdwebcdn.com/ipfs/QmckqJD8PqdNG24uXxDyWA7DPHx6p68dotpcGNWqjSJGqn/Spinner-1s-200px%20(1).svg") top
+        no-repeat;
+
+}
+
+.textbox {
+  color:#3C1B32 !important;
+  background: rgba(217, 183, 245, 0.1);
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 18px 0 #82919b;
 }
 
 .main {
@@ -10,6 +42,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: opacity !important;
 }
 
 .stakeContainer {
@@ -17,13 +50,11 @@
   margin-bottom: 2rem;
 }
 
-.textbox {
-  padding: 5px;
-}
-
 .button {
+  background-color: #3C1B32 !important;
+  color:#ebebee !important;
   padding: 5px;
-  margin-left: 10px;
+  margin-left: 10px !important;
 }
 
 .title a {
@@ -39,6 +70,7 @@
 
 .title {
   margin: 0;
+  margin-bottom: 2rem;
   line-height: 1.15;
   font-size: 4rem;
 }
@@ -49,7 +81,7 @@
 }
 
 .connect {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   width: 230px;
 }
 
@@ -78,22 +110,23 @@
 }
 
 .card {
-  background-color: #1b2129;
+  background: rgba(217, 183, 245, 0.1);
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 350px;
+  border: 1px solid rgba(46, 44, 44, 0.4);
+  box-shadow: 0 0 18px 0 #82919b;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  background-color: #272c34;
+  background-color: #4d5666;
   color: #0ea5e9;
   border-color: #0ea5e9;
 }
@@ -123,10 +156,10 @@
 
 .card,
 .footer {
-  border-color: #222;
+  
 }
 .code {
-  background: #111;
+  background: opacity !important;
 }
 .logo img {
   filter: invert(1);

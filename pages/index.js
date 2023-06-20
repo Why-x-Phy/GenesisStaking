@@ -12,6 +12,7 @@ import { ethers } from "ethers";
 
 import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
+
 import { stakingContractAddress } from "../const/yourDetails";
 
 export default function Home() {
@@ -62,18 +63,19 @@ export default function Home() {
     refetchStakingInfo();
   };
 
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
-        <h1 className={styles.title}>Welcome to staking app!</h1>
+        <h1 className={styles.title}>Welcome to the UR Token Staking App</h1>
+
+        <ConnectWallet btnTitle="Connect Wallet" className={styles.wallet} />
 
         <p className={styles.description}>
-          Stake certain amount and get reward tokens back!
+        Set a certain amount of your UR Tokens and get USDT back as reward
         </p>
 
-        <div className={styles.connect}>
-          <ConnectWallet />
-        </div>
+        
 
         <div className={styles.stakeContainer}>
           <input
@@ -130,25 +132,29 @@ export default function Home() {
         <div className={styles.grid}>
           <a className={styles.card}>
             <h2>Stake token balance</h2>
-            <p>{stakingTokenBalance?.displayValue}</p>
+            <p>{parseFloat(stakingTokenBalance?.displayValue).toFixed(2)}</p>
           </a>
 
           <a className={styles.card}>
             <h2>Reward token balance</h2>
-            <p>{rewardTokenBalance?.displayValue}</p>
+            <p>{parseFloat(rewardTokenBalance?.displayValue).toFixed(2)}</p>
           </a>
 
           <a className={styles.card}>
             <h2>Staked amount</h2>
             <p>
-              {stakeInfo && ethers.utils.formatEther(stakeInfo[0].toString())}
+            {stakeInfo && parseFloat(ethers.utils.formatEther(stakeInfo[0].toString())).toFixed(2)}
+
             </p>
           </a>
 
           <a className={styles.card}>
             <h2>Current reward</h2>
             <p>
-              {stakeInfo && ethers.utils.formatEther(stakeInfo[1].toString())}
+            {stakeInfo && parseFloat(ethers.utils.formatUnits(stakeInfo[1].toString(), 6)).toFixed(3)}
+
+
+
             </p>
           </a>
         </div>

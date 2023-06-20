@@ -15,10 +15,35 @@ a {
   box-sizing: border-box;
 }
 
-html {
-  color-scheme: dark;
+
+
+:root {
+  --black: opacity;
 }
+
 body {
-  color: #e7e8e8;
-  background: #0f1318;
+  color: #4b4e4e;
+  background: var(--black);
 }
+
+.tw-connected-wallet {
+  background: #3C1B32 !important; 
+ }
+
+ .container {
+  background-color: transparent !important;
+}
+
+ .css-6og8le{
+ background-color:rgba(255,255,255,0) !important;  
+ }
+
+ .css-1hr3n8y {
+  background: #3C1B32 !important;
+  top: 200px !important;
+ }
+
+ .css-1309xma {
+  background: #3C1B32 !important;
+  top: 200px !important;
+ }
